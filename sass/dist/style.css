@@ -1,15 +1,25 @@
 @charset "UTF-8";
-* {
-  box-sizing: border-box;
+:root {
+  --col_primaire: #9356DC;
+  --col_secondaire: #FF79DA;
+  --col_tertiaire: #99E2D0;
+  --col_gris_tres_clair: #f6f6f6;
+  --col_gris_clair: #eaeaea;
+  --col_gris_sombre: #353535;
 }
 
 * {
+  box-sizing: border-box;
   font-family: 'roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   color: #000;
+}
+
+p {
+  margin: 0;
 }
 
 h2 {
@@ -22,12 +32,9 @@ h2 {
   margin: 0;
 }
 
-:root {
-  --col_primaire: #9356DC;
-  --col_secondaire: #FF79DA;
-  --col_tertiaire: #99E2D0;
-  --col_gris_clair: #eaeaea;
-  --col_gris_sombre: #353535;
+a:link, a:visited {
+  color: #000;
+  text-decoration: none;
 }
 
 body {
@@ -53,6 +60,7 @@ header > img {
   display: flex;
   justify-content: center;
   gap: 17px;
+  padding: 1em;
   background-color: var(--col_gris_clair);
   box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.2);
 }
@@ -67,15 +75,27 @@ header > img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px 0;
+  align-items: center;
+  padding: 2.5em 1.5em;
+  gap: 2.5em;
   border: 1px red dotted;
+  background: var(--col_gris_tres_clair);
 }
 
 .entete_titre_accroche, .entete_texte_accroche {
   text-align: center;
 }
 
+.entete_titre_accroche {
+  width: 275px;
+}
+
+.entete_texte_accroche > p {
+  font-size: 18px;
+}
+
 .section_entete button {
+  margin: auto;
   height: 50px;
   width: 230px;
   border-radius: 25px;
@@ -88,7 +108,7 @@ header > img {
 
 /* Section Fonctionnement */
 .section_fonctionnement {
-  padding: 30px 20px;
+  padding: 20px;
   border: 1px green dotted;
   display: flex;
   flex-direction: column;
@@ -97,9 +117,11 @@ header > img {
 
 .fonctionnement_cards {
   display: flex;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
-  padding: 10px;
+  padding: 20px;
+  margin-left: 10px;
+  background: var(--col_gris_tres_clair);
 }
 
 .fonctionnement_cards .pastilles {
@@ -107,13 +129,24 @@ header > img {
   align-items: center;
   justify-content: center;
   position: relative;
-  left: -20px;
+  left: -30px;
   border-radius: 50%;
   width: 1.5em;
   height: 1.5em;
   font-weight: 500;
   color: white;
   background: var(--col_primaire);
+}
+
+.fonctionnement_cards img {
+  position: relative;
+  left: -10px;
+}
+
+.fonctionnement_cards > p {
+  font-weight: 500;
+  position: relative;
+  left: 15px;
 }
 
 /* Section Restaurants */
