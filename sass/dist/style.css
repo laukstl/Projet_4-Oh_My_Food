@@ -209,16 +209,13 @@ footer > p {
 }
 
 footer li {
+  display: flex;
   color: white;
 }
 
 footer .lignes_nav p {
-  color: red;
-  font-weight: 700px;
-}
-
-footer .lignes_nav {
-  border: 1px red solid;
+  color: white;
+  font-weight: 500;
 }
 
 ol {

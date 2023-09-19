@@ -208,14 +208,15 @@ footer {
         font-weight: 400;
     }
     & li {
+        display: flex;
         color: white;
     }
     & .lignes_nav p {
-        color: red;
-        font-weight: 700px;
+        color: white;
+        font-weight: 500;
     }
     & .lignes_nav {
-        border: 1px red solid;
+        // border: 1px red solid;
     }
 }
 
