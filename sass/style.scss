@@ -1,7 +1,3 @@
-// * {
-//     box-sizing:border-box;
-// }
-
 :root {
     --col_primaire: #9356DC;
     --col_secondaire: #FF79DA;
@@ -11,6 +7,10 @@
     --col_gris_clair: #eaeaea;
     --col_gris_sombre: #353535;
 }
+
+// * {
+//     box-sizing:border-box;
+// }
 
 * {
     box-sizing:border-box;
@@ -29,6 +29,16 @@ p {
 h2 {
     font-family: 'roboto', sans-serif;
     font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    color: #000;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
@@ -107,12 +117,12 @@ header > img {
     font: 500 16px "Roboto", sans-serif;
     color: white;
     background: linear-gradient(to top, var(--col_primaire), var(--col_secondaire));
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Section Fonctionnement */
 .section_fonctionnement {
-    padding: 20px;
+    padding: 40px 20px 60px 20px;
     border: 1px green dotted; // GGGGRRREEEEEEEEEENNNNNNNNN
     display: flex;
     flex-direction: column;
@@ -159,28 +169,58 @@ header > img {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 30px 0;
+    padding: 30px 20px;
+    gap: 20px;
+    background: var(--col_gris_tres_clair);
     border: 1px blue dotted; // BLLLLLLLLLUUUUUUUUEEEEEEE
 }
 
 .restaurant_cards {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
+    height: 250px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.restaurant_cards img {
-    width: 100px;
-    object-fit: cover;
+    & .restaurant_cards_images {
+        width: 100%;
+        object-fit: cover;
+        height: 175px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        & .card_like img {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
 }
 
 /* Footer */
 footer {
     color: white;
     background-color: #353535;
+    & > p {
+        color: white;
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    & li {
+        color: white;
+    }
+    & .lignes_nav p {
+        color: red;
+        font-weight: 700px;
+    }
+    & .lignes_nav {
+        border: 1px red solid;
+    }
 }
 
 ol {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
