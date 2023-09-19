@@ -7,6 +7,8 @@
   --col_gris_tres_clair: #f6f6f6;
   --col_gris_clair: #eaeaea;
   --col_gris_sombre: #353535;
+  --col_vert_clair: #99E2D0;
+  --col_vert_sombre: #008766;
 }
 
 * {
@@ -89,7 +91,6 @@ header > img {
   align-items: center;
   padding: 2.5em 1.5em;
   gap: 2.5em;
-  border: 1px red dotted;
   background: var(--col_gris_tres_clair);
 }
 
@@ -120,7 +121,6 @@ header > img {
 /* Section Fonctionnement */
 .section_fonctionnement {
   padding: 40px 20px 60px 20px;
-  border: 1px green dotted;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -165,10 +165,9 @@ header > img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px 20px;
+  padding: 50px 20px;
   gap: 20px;
   background: var(--col_gris_tres_clair);
-  border: 1px blue dotted;
 }
 
 .restaurant_cards {
@@ -185,6 +184,18 @@ header > img {
   border-radius: 20px 20px 0px 0px;
 }
 
+.restaurant_cards .label_new {
+  position: absolute;
+  padding: 0.5em 1em;
+  background: var(--col_vert_clair);
+  color: var(--col_vert_sombre);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 14px;
+  right: 1em;
+  top: 1em;
+}
+
 .restaurant_cards_content {
   display: flex;
   justify-content: space-between;
@@ -199,7 +210,8 @@ header > img {
 /* Footer */
 footer {
   color: white;
-  background-color: #353535;
+  background-color: var(--col_gris_sombre);
+  padding: 25px;
 }
 
 footer > p {
@@ -209,13 +221,22 @@ footer > p {
   font-weight: 400;
 }
 
+footer ol {
+  margin-top: 1em;
+}
+
 footer li {
-  display: flex;
+  line-height: 1.5em;
+  color: white;
+  margin-top: 0.5em;
+}
+
+footer li span {
   color: white;
 }
 
-footer .lignes_nav p {
-  color: white;
+footer li span.foot_fat {
+  margin-left: 0.5em;
   font-weight: 500;
 }
 
