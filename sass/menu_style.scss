@@ -1,0 +1,28 @@
+@import "default";
+
+header{
+    display: flex;
+}
+
+header #fleche_retour {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 22px; /** BIDOUILLE **/
+    left: 25px;
+}
+
+header #logo_omf {
+    width: 200px;
+    margin: 20px auto;
+}
+
+main {
+    & > img {
+        width: 100%;
+    }
+}
+
+
+
+@import "footer";

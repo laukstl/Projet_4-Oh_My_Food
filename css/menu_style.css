@@ -1,0 +1,97 @@
+:root {
+  --col_primaire: #9356DC;
+  --col_secondaire: #FF79DA;
+  --col_tertiaire: #99E2D0;
+  --col_gris_tres_clair: #f6f6f6;
+  --col_gris_clair: #eaeaea;
+  --col_gris_sombre: #353535;
+  --col_vert_clair: #99E2D0;
+  --col_vert_sombre: #008766;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+a:link, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+}
+
+header #fleche_retour {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: 22px;
+  /** BIDOUILLE **/
+  left: 25px;
+}
+
+header #logo_omf {
+  width: 200px;
+  margin: 20px auto;
+}
+
+main > img {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  color: white;
+  background-color: var(--col_gris_sombre);
+  padding: 25px;
+}
+
+footer > p {
+  color: white;
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+footer ol {
+  margin-top: 1em;
+}
+
+footer li {
+  line-height: 1.5em;
+  color: white;
+  margin-top: 0.5em;
+}
+
+footer li span {
+  color: white;
+}
+
+footer li span.foot_fat {
+  margin-left: 0.5em;
+  font-weight: 500;
+}

@@ -1,0 +1,32 @@
+/* Footer */
+footer {
+  color: white;
+  background-color: var(--col_gris_sombre);
+  padding: 25px;
+}
+
+footer > p {
+  color: white;
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+footer ol {
+  margin-top: 1em;
+}
+
+footer li {
+  line-height: 1.5em;
+  color: white;
+  margin-top: 0.5em;
+}
+
+footer li span {
+  color: white;
+}
+
+footer li span.foot_fat {
+  margin-left: 0.5em;
+  font-weight: 500;
+}
