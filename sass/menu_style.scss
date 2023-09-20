@@ -23,6 +23,36 @@ main {
     }
 }
 
+/* Section Entrées */
+.section_entree {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 12px;
+    background: var(--col_gris_tres_clair);
+    & p.titre_section {
+        color: red;
+    }
+}
 
+.plat_card {
+    background-color: white;
+    border-radius: 20px;
+    // height: 250px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    & .plats_textes .nom_plat {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    & .prix_plat {
+        margin-top: 18px;
+        // font-size: 15px;
+        font-weight: 700;
+    }
+}
 
 @import "footer";

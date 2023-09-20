@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --col_primaire: #9356DC;
   --col_secondaire: #FF79DA;
@@ -61,6 +62,39 @@ header #logo_omf {
 
 main > img {
   width: 100%;
+}
+
+/* Section Entrées */
+.section_entree {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  gap: 12px;
+  background: var(--col_gris_tres_clair);
+}
+
+.section_entree p.titre_section {
+  color: red;
+}
+
+.plat_card {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.plat_card .plats_textes .nom_plat {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.plat_card .prix_plat {
+  margin-top: 18px;
+  font-weight: 700;
 }
 
 /* Footer */
