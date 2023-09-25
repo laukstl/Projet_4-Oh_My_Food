@@ -18,16 +18,20 @@ header #logo_omf {
 }
 
 main {
+    // border: 1px red solid;
     & > .box_image_restau {
         height: 275px;
+        // background-position-y: 35px;
         background-size: cover;
         background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     }
     & .main_container {
+        // border: 1px green dotted;
         background: var(--col_gris_tres_clair);
-        border-radius: 25px;
+        border-radius: 25px 25px 0 0;
         position: relative;
         top: -35px;
+        // bottom: 135px;
     }
 }
 
@@ -62,21 +66,21 @@ main {
     }
 }
 
-/* Section Entrées */
-.section_entree {
+/* Sections Entrées/Plats/Desserts */
+.courses {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px 12.5px; // *********** PADDING BIDOUILLE ***********
+    padding: 20px 12.5px;
     gap: 12px;
-    & p.titre_section {
+    & p.section__title {
         // font-weight: 300;
         // font-size: 16px;
         // color: red;
     }
 }
 
-.plat_card {
+.card {
     height: 69px;
     background-color: white;
     border-radius: 15px;
@@ -84,47 +88,42 @@ main {
     display: flex;
     overflow: hidden;
     justify-content: flex-end;
-    & .plats_textes {
+    &__text {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         padding: 15px;
-        & .plats_textes_ennonces {
-            & .nom_plat {
-                font-size: 18px;
-                font-weight: 500;
-            }
-            & .commentaires_plat {
-            }
-        }
-        & .prix_plat {
-            font-weight: 700;
-            margin-top: 10%;
-            transform: translateX(45px);
-            transition: all 0.25s ease-in-out;
-        }
-    }  
-    & .btn_selection {
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__description {
+        /* ... */
+    }
+    &__price {
+        font-weight: 700;
+        margin-top: 10%;
+        transform: translateX(45px);
+        transition: all 0.25s ease-in-out;
+    }
+    &__select-button {
         // height: 69px;
         width: 21%; // ******************** BIDOUILLE ********************
         transform: translateX(100%);
         transition: all 0.25s ease-in-out;
     }
-    &:hover .btn_selection {
+    &:hover &__select-button, &:hover &__price {
         cursor: pointer;
         transform: translateX(0%);
         transition: all 0.25s ease-in-out;
     }
-    &:hover .prix_plat {
-        cursor: pointer;
-        transform: translateX(0);
-        transition: all 0.25s ease-in-out;
-    }
 }
 
-.main_container a {
-    margin: auto;
+// .main_container a {
+.btn {
+    margin: 20px auto 40px;
     display: flex;
     justify-content: center;
     align-items: center;

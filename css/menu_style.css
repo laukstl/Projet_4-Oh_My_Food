@@ -68,7 +68,7 @@ main > .box_image_restau {
 
 main .main_container {
   background: var(--col_gris_tres_clair);
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
   position: relative;
   top: -35px;
 }
@@ -113,8 +113,8 @@ main .main_container {
   font: 28px Shrikhand;
 }
 
-/* Section Entrées */
-.section_entree {
+/* Sections Entrées/Plats/Desserts */
+.courses {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -122,7 +122,7 @@ main .main_container {
   gap: 12px;
 }
 
-.plat_card {
+.card {
   height: 69px;
   background-color: white;
   border-radius: 15px;
@@ -132,7 +132,7 @@ main .main_container {
   justify-content: flex-end;
 }
 
-.plat_card .plats_textes {
+.card__text {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -140,38 +140,36 @@ main .main_container {
   padding: 15px;
 }
 
-.plat_card .plats_textes .plats_textes_ennonces .nom_plat {
+.card__name {
   font-size: 18px;
   font-weight: 500;
 }
 
-.plat_card .plats_textes .prix_plat {
+.card__description {
+  /* ... */
+}
+
+.card__price {
   font-weight: 700;
   margin-top: 10%;
   transform: translateX(45px);
   transition: all 0.25s ease-in-out;
 }
 
-.plat_card .btn_selection {
+.card__select-button {
   width: 21%;
   transform: translateX(100%);
   transition: all 0.25s ease-in-out;
 }
 
-.plat_card:hover .btn_selection {
+.card:hover .card__select-button, .card:hover .card__price {
   cursor: pointer;
   transform: translateX(0%);
   transition: all 0.25s ease-in-out;
 }
 
-.plat_card:hover .prix_plat {
-  cursor: pointer;
-  transform: translateX(0);
-  transition: all 0.25s ease-in-out;
-}
-
-.main_container a {
-  margin: auto;
+.btn {
+  margin: 20px auto 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,16 +183,16 @@ main .main_container {
   z-index: 1;
 }
 
-.main_container a p {
+.btn p {
   color: white;
   font: 500 16px "Roboto", sans-serif;
 }
 
-.main_container a:hover::after {
+.btn:hover::after {
   opacity: 1;
 }
 
-.main_container a::after {
+.btn::after {
   content: "";
   opacity: 0;
   border-radius: inherit;
