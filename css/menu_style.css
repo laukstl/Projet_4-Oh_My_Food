@@ -118,31 +118,95 @@ main .main_container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 50px 20px;
+  padding: 20px 12.5px;
   gap: 12px;
 }
 
-.section_entree p.titre_section {
-  color: red;
-}
-
 .plat_card {
+  height: 69px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   display: flex;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+.plat_card .plats_textes {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
 }
 
-.plat_card .plats_textes .nom_plat {
+.plat_card .plats_textes .plats_textes_ennonces .nom_plat {
   font-size: 18px;
   font-weight: 500;
 }
 
-.plat_card .prix_plat {
-  margin-top: 18px;
+.plat_card .plats_textes .prix_plat {
   font-weight: 700;
+  margin-top: 10%;
+  transform: translateX(45px);
+  transition: all 0.25s ease-in-out;
+}
+
+.plat_card .btn_selection {
+  width: 21%;
+  transform: translateX(100%);
+  transition: all 0.25s ease-in-out;
+}
+
+.plat_card:hover .btn_selection {
+  cursor: pointer;
+  transform: translateX(0%);
+  transition: all 0.25s ease-in-out;
+}
+
+.plat_card:hover .prix_plat {
+  cursor: pointer;
+  transform: translateX(0);
+  transition: all 0.25s ease-in-out;
+}
+
+.main_container a {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: auto;
+  height: 50px;
+  width: 218px;
+  border-radius: 25px;
+  background: linear-gradient(to top, var(--col_primaire), var(--col_secondaire));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.main_container a p {
+  color: white;
+  font: 500 16px "Roboto", sans-serif;
+}
+
+.main_container a:hover::after {
+  opacity: 1;
+}
+
+.main_container a::after {
+  content: "";
+  opacity: 0;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  backdrop-filter: brightness(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.5s;
 }
 
 /* Footer */
