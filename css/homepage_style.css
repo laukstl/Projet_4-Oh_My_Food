@@ -134,7 +134,7 @@ header .header_localisation p {
 .section_entete > a::after {
   content: "";
   opacity: 0;
-  border-radius: 25px;
+  border-radius: inherit;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -235,22 +235,28 @@ header .header_localisation p {
   position: relative;
 }
 
-.restaurant_cards_content .card_like .like_liked, .restaurant_cards_content .card_like .like_default {
-  width: 1.5em;
-  height: 1.5em;
+.restaurant_cards_content .card_like .like_default {
   position: absolute;
-  top: 5;
-  left: -30;
-  transition: opacity 0.3s ease;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.4s ease;
+  height: 1.5em;
 }
 
 .restaurant_cards_content .card_like .like_liked {
+  height: 1.5em;
   opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.restaurant_cards_content .card_like:active .like_liked {
+.restaurant_cards_content .card_like:hover .like_liked {
   opacity: 1;
-  transition: opacity 1s ease;
+}
+
+.restaurant_cards_content .card_like:hover .like_default {
+  opacity: 0;
 }
 
 /* Footer */

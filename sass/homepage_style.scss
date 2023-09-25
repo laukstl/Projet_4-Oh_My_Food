@@ -69,7 +69,6 @@ header {
         width: 218px;
         border-radius: 25px;
         background: linear-gradient(to top, var(--col_primaire), var(--col_secondaire));
-        // background: linear-gradient(200.64deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%), linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         z-index: 1;
         & p {
@@ -84,12 +83,12 @@ header {
         &::after {
             content: "";
             opacity: 0;
-            border-radius: 25px;
+            // border-radius: 25px;
+            border-radius: inherit;
             position: absolute;
             top: 0; bottom: 0; left: 0; right: 0;
             z-index: -1;
             backdrop-filter:brightness(1.1);
-            // background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
             transition: opacity 0.5s; // ease-out ?
         }
@@ -171,23 +170,25 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 15px;
-        .card_like {
+        & .card_like {
             cursor: pointer;
             position: relative;
-            .like_liked, .like_default {
-                width: 1.5em;
-                height: 1.5em;
+            & .like_default {
                 position: absolute;
-                top: 5;
-                left: -30;
-                transition: opacity 0.3s ease;
+                top: 0; bottom: 0; left: 0; right: 0;
+                transition: opacity 0.4s ease;
+                height: 1.5em;
             }
-            .like_liked {
+            & .like_liked {
+                height: 1.5em;
                 opacity: 0;
+                transition: opacity 0.4s ease;
             }
-            &:active .like_liked {
+            &:hover .like_liked {
                 opacity: 1;
-                transition: opacity 1s ease;
+            }
+            &:hover .like_default {
+                opacity: 0;
             }
         }
     }
