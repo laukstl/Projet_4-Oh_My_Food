@@ -10,7 +10,7 @@
         left: 25px;
     }
     &__logo {
-        width: 200px;
+        width: 162px;
         margin: 20px auto;
     }
 }
@@ -26,7 +26,7 @@ main {
         background: var(--col_gris_tres_clair);
         border-radius: 25px 25px 0 0;
         position: relative;
-        top: -35px;
+        top: -55px;
     }
 }
 
@@ -34,18 +34,19 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 30px 15px 15px 15px;
     & .card_like {
+        margin-right: 20px;
         cursor: pointer;
         position: relative;
         & .like_default {
             position: absolute;
             top: 0; bottom: 0; left: 0; right: 0;
             transition: opacity 0.4s ease;
-            height: 1.5em;
+            height: 21px;
         }
         & .like_liked {
-            height: 1.5em;
+            height: 21px;
             opacity: 0;
             transition: opacity 0.4s ease;
         }
@@ -66,10 +67,20 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px 12.5px;
-    gap: 12px;
-    & p.section__title {
-        // color: red;
+    padding: 10px 12.5px;
+    margin-bottom: 20px;
+    & .section__title::after { // Trait sous le titre
+        content: "";
+        display: block;
+        margin: 10px 0;
+        border-bottom: 3px #99E2D0 solid;
+        width: 40px;
+    }
+    & .cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
@@ -109,9 +120,9 @@ main {
         max-width: 100%;
     }
     &__price {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 700;
-        margin: 33px 10px 0 10px;
+        margin: 35px 10px 0 10px;
         transition: all 0.25s ease-in-out;
         position: absolute;
         right: 0;
@@ -125,10 +136,6 @@ main {
     &:hover &__price {
         margin-right: 75px; // On peut donc animer une margin !
     }
-    &:hover &__details {
-        // flex: 0.95;
-        // padding-right: 75px;
-    }
     &:hover &__text {
         padding-right: 75px;
         // flex: 0.8;
@@ -140,14 +147,14 @@ main {
 }
 
 .btn {
-    margin: 20px auto 0px;
+    margin: 30px auto 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative; // l'absolute de ::after va se positionner par rapport à son first parent relative, celui ci
     padding: auto;
     height: 50px;
-    width: 218px;
+    width: 186px;
     border-radius: 25px;
     background: linear-gradient(to top, var(--col_primaire), var(--col_secondaire));
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
