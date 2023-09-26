@@ -69,7 +69,7 @@ main {
     padding: 20px 12.5px;
     gap: 12px;
     & p.section__title {
-        color: red;
+        // color: red;
     }
 }
 
@@ -81,19 +81,17 @@ main {
     display: flex;
     overflow: hidden;
     &__text {
-        border: 2px red dotted;
         display: flex;
         padding: 15px;
         white-space: nowrap;
         transition: all 0.25s ease-in-out;
         width: calc(100% - 1px);
-        flex: 1;
     }
     &__details {
-        border: 1px red solid;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        margin-right: 35px;
         flex: 1;
         transition: all 0.25s ease-in-out;
     }
@@ -102,33 +100,38 @@ main {
         font-weight: 500;
         text-overflow: ellipsis;
         overflow: hidden;
-        flex: 1;
         max-width: 100%;
     }
     &__description {
         font-size: 14px;
         text-overflow: ellipsis;
         overflow: hidden;
-        flex: 1;
         max-width: 100%;
     }
     &__price {
         font-size: 18px;
         font-weight: 700;
         margin: 33px 10px 0 10px;
+        transition: all 0.25s ease-in-out;
+        position: absolute;
+        right: 0;
     }
     &__select-button {
-        flex: 0;
         transition: transform 0.25s ease-in-out;
         transform: translateX(110%);
         position: absolute;
         right: 0;
     }
+    &:hover &__price {
+        margin-right: 75px; // On peut donc animer une margin !
+    }
     &:hover &__details {
-        flex: 0.8;
+        // flex: 0.95;
+        // padding-right: 75px;
     }
     &:hover &__text {
-        flex: 0.8;
+        padding-right: 75px;
+        // flex: 0.8;
     }
     &:hover &__select-button {
         cursor: pointer;
