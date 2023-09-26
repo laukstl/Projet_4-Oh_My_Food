@@ -42,11 +42,11 @@ ol {
   list-style-type: none;
 }
 
-header {
+.header {
   display: flex;
 }
 
-header #fleche_retour {
+.header__fleche {
   position: relative;
   width: 30px;
   height: 30px;
@@ -55,9 +55,13 @@ header #fleche_retour {
   left: 25px;
 }
 
-header #logo_omf {
+.header__logo {
   width: 200px;
   margin: 20px auto;
+}
+
+main {
+  background: var(--col_gris_tres_clair);
 }
 
 main > .box_image_restau {
@@ -122,54 +126,84 @@ main .main_container {
   gap: 12px;
 }
 
+.courses p.section__title {
+  color: red;
+}
+
 .card {
   height: 69px;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   display: flex;
   overflow: hidden;
-  justify-content: flex-end;
 }
 
 .card__text {
+  border: 2px red dotted;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
   padding: 15px;
+  white-space: nowrap;
+  transition: all 0.25s ease-in-out;
+  width: calc(100% - 1px);
+  flex: 1;
+}
+
+.card__details {
+  border: 1px red solid;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+  transition: all 0.25s ease-in-out;
 }
 
 .card__name {
   font-size: 18px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  max-width: 100%;
 }
 
 .card__description {
-  /* ... */
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  max-width: 100%;
 }
 
 .card__price {
+  font-size: 18px;
   font-weight: 700;
-  margin-top: 10%;
-  transform: translateX(45px);
-  transition: all 0.25s ease-in-out;
+  margin: 33px 10px 0 10px;
 }
 
 .card__select-button {
-  width: 21%;
-  transform: translateX(100%);
-  transition: all 0.25s ease-in-out;
+  flex: 0;
+  transition: transform 0.25s ease-in-out;
+  transform: translateX(110%);
+  position: absolute;
+  right: 0;
 }
 
-.card:hover .card__select-button, .card:hover .card__price {
+.card:hover .card__details {
+  flex: 0.8;
+}
+
+.card:hover .card__text {
+  flex: 0.8;
+}
+
+.card:hover .card__select-button {
   cursor: pointer;
-  transform: translateX(0%);
-  transition: all 0.25s ease-in-out;
+  transform: none;
 }
 
 .btn {
-  margin: 20px auto 40px;
+  margin: 20px auto 0px;
   display: flex;
   justify-content: center;
   align-items: center;
