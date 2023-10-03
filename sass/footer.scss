@@ -2,22 +2,53 @@
 footer {
     color: white;
     background-color: var(--col_gris_sombre);
-    padding: 25px;
+    padding: 30px 25px;
+    @media (min-width: 1440px) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
     & > p {
         font-family: Shrikhand;
         font-size: 18px;
         font-weight: 400;
+        @media (min-width: 1440px) {
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 138px;
+            // line-height: 1.5em;
+            margin-top: 1.1em;
+            margin-left: 16px;
+        }
     }
     & ol {
         margin-top: 1em;
+        @media (min-width: 1440px) {
+            display: flex;
+            gap: 10px;
+        }
     }
     & li {
         line-height: 1.5em;
         margin-top: 0.5em;
+        @media (min-width: 1440px) {
+            // line-height: 0;
+            // margin-top: 0;
+        }
     }
     & .footer__bold  {
-            margin-left: 0.5em;
+        display: inline-block;
+        margin-left: 0.5em;
             font-weight: 500;
+            @media (min-width: 1440px) {
+                width: 168px;
+            }
+    }
+    & .footer__thin {
+        @media (min-width: 1440px) {
+            display: inline-block;
+            width: 130px;
+        }
+
     }
     & a:link {
         color: white;
