@@ -19,7 +19,6 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal; 
-    color: #000;
 }
 
 p {
@@ -28,9 +27,13 @@ p {
 
 body {
     max-width: 375px;
+    min-width: 330px;
     margin: auto;
     display:flex;
     flex-direction: column;
+    @media (min-width: 376px) {
+        max-width: 1440px;
+    }
 }
 
 a:link, a:visited {

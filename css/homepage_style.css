@@ -17,7 +17,6 @@
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  color: #000;
 }
 
 p {
@@ -26,9 +25,16 @@ p {
 
 body {
   max-width: 375px;
+  min-width: 330px;
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 376px) {
+  body {
+    max-width: 1440px;
+  }
 }
 
 a:link, a:visited {
@@ -70,8 +76,14 @@ header {
 }
 
 header > img {
-  width: 200px;
-  margin: 20px auto;
+  width: 162px;
+  margin: 18px auto;
+}
+
+@media (min-width: 376px) {
+  header > img {
+    width: 200px;
+  }
 }
 
 header .header_localisation {
@@ -81,6 +93,12 @@ header .header_localisation {
   padding: 1em;
   background-color: var(--col_gris_clair);
   box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 376px) {
+  header .header_localisation {
+    box-shadow: none;
+  }
 }
 
 header .header_localisation p {
@@ -95,13 +113,31 @@ header .header_localisation p {
   justify-content: center;
   align-items: center;
   padding: 2.5em 1.5em;
-  gap: 2.5em;
+  gap: 1em;
   background: var(--col_gris_tres_clair);
   text-align: center;
 }
 
 .section_entete_titre_accroche {
   width: 275px;
+}
+
+.section_entete_titre_accroche h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media (min-width: 1440px) {
+  .section_entete_titre_accroche h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section_entete_titre_accroche {
+    width: 100%;
+    font-size: 40px;
+  }
 }
 
 .section_entete_texte_accroche > p {
@@ -114,6 +150,7 @@ header .header_localisation p {
   align-items: center;
   position: relative;
   padding: auto;
+  margin: 15px auto;
   height: 50px;
   width: 218px;
   border-radius: 25px;
@@ -124,7 +161,7 @@ header .header_localisation p {
 
 .section_entete > a p {
   color: white;
-  font: 500 16px "Roboto", sans-serif;
+  font: 400 16px "Roboto", sans-serif;
 }
 
 .section_entete > a:hover::after {
@@ -151,16 +188,41 @@ header .header_localisation p {
   padding: 40px 20px 60px 20px;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 25px;
+}
+
+@media (min-width: 1440px) {
+  .section_fonctionnement {
+    padding: 50px 180px;
+  }
+}
+
+.fonctionnement-cards__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+@media (min-width: 1440px) {
+  .fonctionnement-cards__box {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .fonctionnement_cards {
   display: flex;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
   margin-left: 10px;
   background: var(--col_gris_tres_clair);
+}
+
+@media (min-width: 1440px) {
+  .fonctionnement_cards {
+    width: 100%;
+  }
 }
 
 .fonctionnement_cards .pastilles {
@@ -196,6 +258,28 @@ header .header_localisation p {
   padding: 50px 20px;
   gap: 20px;
   background: var(--col_gris_tres_clair);
+}
+
+@media (min-width: 1440px) {
+  .section_restaurants {
+    padding: 30px 180px;
+  }
+}
+
+.restaurant_cards__box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 1440px) {
+  .restaurant_cards__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 100px;
+  }
 }
 
 .restaurant_cards {
@@ -267,7 +351,6 @@ footer {
 }
 
 footer > p {
-  color: white;
   font-family: Shrikhand;
   font-size: 18px;
   font-weight: 400;
@@ -279,15 +362,19 @@ footer ol {
 
 footer li {
   line-height: 1.5em;
-  color: white;
   margin-top: 0.5em;
 }
 
-footer li span {
+footer .footer__bold {
+  margin-left: 0.5em;
+  font-weight: 500;
+}
+
+footer a:link {
   color: white;
 }
 
-footer li span.foot_fat {
-  margin-left: 0.5em;
-  font-weight: 500;
+footer a:link:hover {
+  text-decoration: underline;
+  color: white;
 }

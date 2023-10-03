@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --col_primaire: #9356DC;
   --col_secondaire: #FF79DA;
@@ -17,7 +16,6 @@
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  color: #000;
 }
 
 p {
@@ -26,9 +24,16 @@ p {
 
 body {
   max-width: 375px;
+  min-width: 330px;
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 376px) {
+  body {
+    max-width: 1440px;
+  }
 }
 
 a:link, a:visited {
@@ -46,7 +51,7 @@ ol {
   display: flex;
 }
 
-.header__fleche {
+.header__arrow {
   position: relative;
   width: 30px;
   height: 30px;
@@ -60,37 +65,59 @@ ol {
   margin: 20px auto;
 }
 
-main {
+.main__container {
   background: var(--col_gris_tres_clair);
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -40px;
 }
 
-main > .box_image_restau {
+@media (min-width: 1440px) {
+  .main__container {
+    margin: 0px 193px;
+    padding: 0px 193px;
+  }
+}
+
+main > .restaurant__image_box {
   height: 275px;
   background-size: cover;
+  background-position: center;
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
-main .main_container {
-  background: var(--col_gris_tres_clair);
-  border-radius: 25px 25px 0 0;
-  position: relative;
-  top: -55px;
+@media (min-width: 1440px) {
+  main > .restaurant__image_box {
+    height: 375px;
+  }
 }
 
-.entete_menu {
+.menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 15px 15px 15px;
 }
 
-.entete_menu .card_like {
+@media (min-width: 1440px) {
+  .menu__header {
+    justify-content: center;
+  }
+}
+
+.menu__header .like__button {
   margin-right: 20px;
   cursor: pointer;
   position: relative;
 }
 
-.entete_menu .card_like .like_default {
+@media (min-width: 1440px) {
+  .menu__header .like__button {
+    margin-left: 20px;
+  }
+}
+
+.menu__header .like__button .like__default {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -100,25 +127,25 @@ main .main_container {
   height: 21px;
 }
 
-.entete_menu .card_like .like_liked {
+.menu__header .like__button .like__liked {
   height: 21px;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.entete_menu .card_like:hover .like_liked {
+.menu__header .like__button:hover .like__liked {
   opacity: 1;
 }
 
-.entete_menu .card_like:hover .like_default {
+.menu__header .like__button:hover .like__default {
   opacity: 0;
 }
 
-.entete_menu .Nom_etablissement {
+.menu__header .establishment__name {
   font: 28px Shrikhand;
 }
 
-/* Sections Entrées/Plats/Desserts */
+/* SECTION STARTERS - ENTREES / DISHES - PLATS / DESSERTS */
 .courses {
   width: 100%;
   display: flex;
@@ -259,7 +286,6 @@ footer {
 }
 
 footer > p {
-  color: white;
   font-family: Shrikhand;
   font-size: 18px;
   font-weight: 400;
@@ -271,15 +297,19 @@ footer ol {
 
 footer li {
   line-height: 1.5em;
-  color: white;
   margin-top: 0.5em;
 }
 
-footer li span {
+footer .footer__bold {
+  margin-left: 0.5em;
+  font-weight: 500;
+}
+
+footer a:link {
   color: white;
 }
 
-footer li span.foot_fat {
-  margin-left: 0.5em;
-  font-weight: 500;
+footer a:link:hover {
+  text-decoration: underline;
+  color: white;
 }

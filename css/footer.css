@@ -6,7 +6,6 @@ footer {
 }
 
 footer > p {
-  color: white;
   font-family: Shrikhand;
   font-size: 18px;
   font-weight: 400;
@@ -18,15 +17,19 @@ footer ol {
 
 footer li {
   line-height: 1.5em;
-  color: white;
   margin-top: 0.5em;
 }
 
-footer li span {
+footer .footer__bold {
+  margin-left: 0.5em;
+  font-weight: 500;
+}
+
+footer a:link {
   color: white;
 }
 
-footer li span.foot_fat {
-  margin-left: 0.5em;
-  font-weight: 500;
+footer a:link:hover {
+  text-decoration: underline;
+  color: white;
 }
