@@ -6,26 +6,18 @@
         position: relative;
         width: 30px;
         height: 30px;
-        top: 22px; /** BIDOUILLE **/
+        top: 22px;
         left: 25px;
     }
     &__logo {
         width: 162px;
+        @media (min-width: 1440px) { width: 200px;}
         margin: 20px auto;
     }
 }
 
-.main__container {
-    // background: var(--col_gris_tres_clair);
-    @media (min-width: 1440px) { margin: 0px 193px; padding: 0px 193px; }
-    background: var(--col_gris_tres_clair);
-    border-radius: 40px 40px 0 0;
-    position: relative;
-    top: -40px;
-}
-
 main {
-    // background: var(--col_gris_tres_clair);
+    border: 1px green dotted;
     & > .restaurant__image_box {
         height: 275px;
         @media (min-width: 1440px) { height: 375px;}
@@ -33,14 +25,27 @@ main {
         background-position: center;
         background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     }
-    // & .main__container {
-        // background: var(--col_gris_tres_clair);
-        // @media (min-width: 1440px) { padding: 0px 180px; }
-        // background: var(--col_gris_tres_clair);
-        // border-radius: 25px 25px 0 0;
-        // position: relative;
-        // top: -55px;
-    // }
+}
+
+.restaurant__container {
+    @media (min-width: 1440px) {
+        margin: 0px 193px;
+        padding: 0px 193px 40px 193px;
+    }
+    background: var(--col_gris_tres_clair);
+    padding: 0 0 40px 0;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: -40px;
+        height: 40px;
+        background: var(--col_gris_tres_clair);
+        border-radius: 40px 40px 0 0;
+    }
 }
 
 .menu__header {
@@ -48,7 +53,7 @@ main {
     justify-content: space-between;
     @media (min-width: 1440px) { justify-content: center; }
     align-items: center;
-    padding: 30px 15px 15px 15px;
+    padding: 0px 15px 15px 15px;
     & .like__button {
         margin-right: 20px;
         @media (min-width: 1440px) { margin-left: 20px; }
@@ -137,7 +142,7 @@ main {
     &__price {
         font-size: 15px;
         font-weight: 700;
-        margin: 35px 10px 0 10px;
+        margin: 35px 15px 0 10px;
         transition: all 0.25s ease-in-out;
         position: absolute;
         right: 0;
@@ -186,7 +191,6 @@ main {
     &::after {
         content: "";
         opacity: 0;
-        // border-radius: 25px;
         border-radius: inherit;
         position: absolute;
         top: 0; bottom: 0; left: 0; right: 0;

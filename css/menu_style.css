@@ -56,7 +56,6 @@ ol {
   width: 30px;
   height: 30px;
   top: 22px;
-  /** BIDOUILLE **/
   left: 25px;
 }
 
@@ -65,18 +64,14 @@ ol {
   margin: 20px auto;
 }
 
-.main__container {
-  background: var(--col_gris_tres_clair);
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  top: -40px;
+@media (min-width: 1440px) {
+  .header__logo {
+    width: 200px;
+  }
 }
 
-@media (min-width: 1440px) {
-  .main__container {
-    margin: 0px 193px;
-    padding: 0px 193px;
-  }
+main {
+  border: 1px green dotted;
 }
 
 main > .restaurant__image_box {
@@ -92,11 +87,36 @@ main > .restaurant__image_box {
   }
 }
 
+.restaurant__container {
+  background: var(--col_gris_tres_clair);
+  padding: 0 0 40px 0;
+  position: relative;
+}
+
+@media (min-width: 1440px) {
+  .restaurant__container {
+    margin: 0px 193px;
+    padding: 0px 193px 40px 193px;
+  }
+}
+
+.restaurant__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: -40px;
+  height: 40px;
+  background: var(--col_gris_tres_clair);
+  border-radius: 40px 40px 0 0;
+}
+
 .menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 15px 15px 15px;
+  padding: 0px 15px 15px 15px;
 }
 
 @media (min-width: 1440px) {
@@ -213,7 +233,7 @@ main > .restaurant__image_box {
 .card__price {
   font-size: 15px;
   font-weight: 700;
-  margin: 35px 10px 0 10px;
+  margin: 35px 15px 0 10px;
   transition: all 0.25s ease-in-out;
   position: absolute;
   right: 0;
