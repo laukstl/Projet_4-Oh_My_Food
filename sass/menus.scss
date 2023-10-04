@@ -1,4 +1,5 @@
 @import "default";
+@import "footer";
 
 .header {
     display: flex;
@@ -17,7 +18,6 @@
 }
 
 main {
-    border: 1px green dotted;
     & > .restaurant__image_box {
         height: 275px;
         @media (min-width: 1440px) { height: 375px;}
@@ -89,7 +89,7 @@ main {
     flex-direction: column;
     padding: 10px 12.5px;
     margin-bottom: 20px;
-    & .section__title::after { // Trait sous le titre
+    & .section__title::after { // Trait
         content: "";
         display: block;
         margin: 10px 0;
@@ -154,7 +154,7 @@ main {
         right: 0;
     }
     &:hover &__price {
-        margin-right: 75px; // On peut donc animer une margin !
+        margin-right: 75px; // anim une margin !
     }
     &:hover &__text {
         padding-right: 75px;
@@ -197,8 +197,8 @@ main {
         z-index: -1;
         backdrop-filter:brightness(1.1);
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-        transition: opacity 0.5s; // ease-out ?
+        transition: opacity 0.5s;
     }
 }
 
-@import "footer";
+
