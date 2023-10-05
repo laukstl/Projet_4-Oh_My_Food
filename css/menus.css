@@ -289,6 +289,32 @@ main > .restaurant__image_box.etablissement_delice {
   gap: 12px;
 }
 
+.courses.starters, .courses.dishes, .courses.desserts {
+  opacity: 0;
+  animation: 2s ease 0.5s FadeIn forwards;
+}
+
+.courses.starters {
+  animation-delay: 0s;
+}
+
+.courses.dishes {
+  animation-delay: 0.25s;
+}
+
+.courses.desserts {
+  animation-delay: 0.5s;
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .card {
   height: 69px;
   background-color: white;

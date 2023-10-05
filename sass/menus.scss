@@ -110,6 +110,24 @@ main {
         display: flex;
         flex-direction: column;
         gap: 12px;
+    
+    }
+    &.starters, &.dishes, &.desserts {
+        opacity: 0;
+        animation: 2s ease 0.5s FadeIn forwards;
+    }
+    &.starters {
+        animation-delay: 0s;
+    }
+    &.dishes {
+        animation-delay: 0.25s;
+    }
+    &.desserts {
+        animation-delay: 0.5s;
+    }
+    @keyframes FadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
 }
 
