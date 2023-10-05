@@ -8,13 +8,6 @@ footer {
         display: flex;
         flex-direction: row-reverse;
     }
-    @media (min-width: 768px) and (max-width: 1439px) {
-        background: darkslateblue;
-        // padding: 30px 25px;
-        // display: flex;
-        // justify-content: center;
-        // flex-direction: row-reverse;
-    }
     & > p {
         font-family: Shrikhand;
         font-size: 18px;

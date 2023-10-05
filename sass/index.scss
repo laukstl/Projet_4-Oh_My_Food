@@ -86,10 +86,6 @@ header {
             color: var(--col_gris_sombre);
         }
     }
-    // @media (min-width: 375px) {
-    //    background: red;
-    //    border: 1px solid red;
-    // }
 }
 
 /* Section Entête */
@@ -183,7 +179,6 @@ header {
 }
 
 .fonctionnement_cards {
-    border: 1px red solid;
     display: flex;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
@@ -191,9 +186,7 @@ header {
     margin-left: 10px;
     background: var(--col_gris_tres_clair);
     @media (min-width: 720px) and (max-width: 1439px) {
-        border: 1px green solid;
-        min-width: 343px;
-        // min-width: (1440-(180*2)-(25*2))/3; /* 343.3333333333333 */ 
+        min-width: 343px; // (1440-(180*2)-(25*2))/3
     }
     @media (min-width: 1440px) {
         width: 100%;
@@ -242,7 +235,6 @@ header {
     gap: 18px;
     padding: 0; margin: 0;
     @media (min-width: 1054px) and (max-width: 1439px) {
-        // align-items: center;
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
@@ -260,13 +252,8 @@ header {
     border-radius: 20px;
     height: 250px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    // @media (min-width: 720px) and (max-width: 1053) {
-    //     background: red;
-    // }
     @media (min-width: 1054px) and (max-width: 1439px) {
-        border: 1px green solid;
-        // min-width: 720-(20*2);
-        min-width: 490px;
+        min-width: 490px; // 720-(20*2)
     }
     & .restaurant_cards_images {
         width: 100%;

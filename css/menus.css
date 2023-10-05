@@ -54,17 +54,11 @@ footer {
   padding: 22px 25px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1054px) {
   footer {
     padding: 30px 25px;
     display: flex;
     flex-direction: row-reverse;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1439px) {
-  footer {
-    background: darkslateblue;
   }
 }
 
@@ -74,7 +68,7 @@ footer > p {
   font-weight: 400;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1054px) {
   footer > p {
     justify-content: flex-end;
     align-items: flex-end;
@@ -88,7 +82,7 @@ footer ol {
   margin-top: 1em;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1054px) {
   footer ol {
     display: flex;
     gap: 10px;
@@ -99,7 +93,7 @@ footer li {
   line-height: 1.5em;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1054px) {
   footer li {
     margin-top: 0.7em;
   }
@@ -111,13 +105,13 @@ footer .footer__bold {
   font-weight: 500;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1054px) {
   footer .footer__bold {
     width: 168px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1054px) {
   footer .footer__thin {
     display: inline-block;
     width: 130px;
@@ -185,6 +179,8 @@ main > .restaurant__image_box.etablissement_delice {
 }
 
 .restaurant__container {
+  max-width: 1054px;
+  margin: auto;
   background: var(--col_gris_tres_clair);
   padding: 0 0 40px 0;
   position: relative;
@@ -216,7 +212,7 @@ main > .restaurant__image_box.etablissement_delice {
   padding: 0px 15px 15px 15px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .menu__header {
     justify-content: center;
   }
@@ -228,7 +224,7 @@ main > .restaurant__image_box.etablissement_delice {
   position: relative;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .menu__header .like__button {
     margin-left: 20px;
   }
@@ -271,6 +267,12 @@ main > .restaurant__image_box.etablissement_delice {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .courses {
+    align-items: center;
+  }
+}
+
 .courses .section__title::after {
   content: "";
   display: block;
@@ -281,6 +283,7 @@ main > .restaurant__image_box.etablissement_delice {
 
 .courses .cards {
   width: 100%;
+  max-width: 642px;
   display: flex;
   flex-direction: column;
   gap: 12px;
