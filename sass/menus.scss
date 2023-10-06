@@ -1,6 +1,20 @@
 @import "default";
 @import "footer";
 
+// h2 {
+    // font-family: 'roboto', sans-serif;
+    // font-size: 16px;
+    // font-style: normal;
+    // font-weight: 300;
+    // line-height: normal; 
+    // color: #000;
+    // margin: 0;
+// }
+
+h2, h3 {
+    margin: 0;
+}
+
 .header {
     display: flex;
     &__arrow {
@@ -199,7 +213,6 @@ main {
     justify-content: center;
     align-items: center;
     position: relative; // l'absolute de ::after va se positionner par rapport à son first parent relative, celui ci
-    padding: auto;
     height: 50px;
     width: 186px;
     border-radius: 25px;
@@ -227,5 +240,3 @@ main {
         transition: opacity 0.5s;
     }
 }
-
-

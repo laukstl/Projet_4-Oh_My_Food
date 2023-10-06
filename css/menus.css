@@ -127,6 +127,10 @@ footer a:link:hover {
   color: white;
 }
 
+h2, h3 {
+  margin: 0;
+}
+
 .header {
   display: flex;
 }
@@ -391,7 +395,6 @@ main > .restaurant__image_box.etablissement_delice {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: auto;
   height: 50px;
   width: 186px;
   border-radius: 25px;
