@@ -18,7 +18,7 @@
   line-height: normal;
 }
 
-p {
+h2, h3, p {
   margin: 0;
 }
 
@@ -127,10 +127,6 @@ footer a:link:hover {
   color: white;
 }
 
-h2, h3 {
-  margin: 0;
-}
-
 .header {
   display: flex;
 }
@@ -190,6 +186,12 @@ main > .restaurant__image_box.etablissement_delice {
   position: relative;
 }
 
+@media (min-width: 685px) and (max-width: 1439px) {
+  .restaurant__container {
+    padding: 0px 20% 40px 10% px;
+  }
+}
+
 @media (min-width: 1440px) {
   .restaurant__container {
     margin: 0px 193px;
@@ -216,7 +218,7 @@ main > .restaurant__image_box.etablissement_delice {
   padding: 0px 15px 15px 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 685px) {
   .menu__header {
     justify-content: center;
   }
@@ -228,7 +230,7 @@ main > .restaurant__image_box.etablissement_delice {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 685px) {
   .menu__header .like__button {
     margin-left: 20px;
   }
@@ -271,7 +273,7 @@ main > .restaurant__image_box.etablissement_delice {
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 685px) and (max-width: 1439px) {
   .courses {
     align-items: center;
   }

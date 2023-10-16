@@ -78,7 +78,7 @@
   width: 60%;
   height: 45%;
   border: 10px solid transparent;
-  border-bottom: 10px solid #99E2D0;
+  border-bottom: 10px solid var(--col_tertiaire);
   border-radius: 50%;
   animation: loader 2s infinite;
   animation-timing-function: linear;
@@ -93,7 +93,7 @@
 .pan-loader .pan {
   width: 60%;
   height: 20px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(var(--col_secondaire), var(--col_primaire));
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -101,7 +101,7 @@
 .pan-loader .handle {
   width: 40%;
   height: 10px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(var(--col_secondaire), var(--col_primaire));
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -114,7 +114,7 @@
   left: 15%;
   width: 30%;
   height: 8px;
-  background: lightgray;
+  background: var(--col_gris_clairs);
   border-radius: 20px;
   animation: shadow 2s infinite;
 }

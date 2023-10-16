@@ -2,10 +2,10 @@
 
 $component-dimension: 180px;
 $timing: 2s;
-$color-shadow: lightgray;
-$pan-color-light: #FF79DA;
-$pan-color-dark: #9356DC;
-$loader-color: #99E2D0;
+$color-shadow: var(--col_gris_clairs); // lightgray
+$pan-color-light: var(--col_secondaire); // #FF79DA
+$pan-color-dark: var(--col_primaire); // #9356DC
+$loader-color: var(--col_tertiaire); // #99E2D0
 
 @keyframes loader {
   0% {
@@ -120,7 +120,6 @@ $loader-color: #99E2D0;
     width: 30%;
     height: 8px;
     background: $color-shadow;
-    // box-shadow: 5px 0 8px 4px $color-shadow;
     border-radius: 20px;
     animation: shadow $timing infinite;
   }
