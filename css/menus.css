@@ -198,19 +198,19 @@ main > .restaurant__image_box {
 }
 
 main > .restaurant__image_box.etablissement_palette {
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../images/restaurants/jay-wennington-1440.jpg");
 }
 
 main > .restaurant__image_box.etablissement_note {
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../images/restaurants/stil-1440.jpg");
 }
 
 main > .restaurant__image_box.etablissement_francaise {
-  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../images/restaurants/toa-heftiba-1440.jpg");
 }
 
 main > .restaurant__image_box.etablissement_delice {
-  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../images/restaurants/louis-hansel-1440.jpg");
 }
 
 .restaurant__container {
