@@ -10,6 +10,42 @@
   --col_vert_sombre: #008766;
 }
 
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto/roboto-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto/roboto-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-medium-webfont.woff") format("woff"), url("../fonts/roboto/roboto-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-bold-webfont.woff") format("woff"), url("../fonts/roboto/roboto-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("../fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("../fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'roboto', sans-serif;
@@ -19,7 +55,7 @@
   line-height: normal;
 }
 
-h2, h3, p {
+h1, h2, h3, p {
   margin: 0;
 }
 
@@ -99,7 +135,8 @@ footer {
 }
 
 footer > p {
-  font-family: Shrikhand;
+  font-family: 'Shrikhand';
+  font-style: normal;
   font-size: 18px;
   font-weight: 400;
 }
@@ -161,6 +198,15 @@ footer a:link {
 footer a:link:hover {
   text-decoration: underline;
   color: white;
+}
+
+h1 {
+  font-family: 'roboto', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
 }
 
 h2 {
