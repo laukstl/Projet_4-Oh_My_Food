@@ -37,6 +37,41 @@ body {
   }
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(to top, var(--col_primaire), var(--col_secondaire));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.btn span {
+  color: white;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn::after {
+  content: "";
+  opacity: 0;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  backdrop-filter: brightness(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.5s;
+}
+
 a:link, a:visited {
   color: #000;
   text-decoration: none;
@@ -378,42 +413,13 @@ header .header_localisation p {
   font-size: 18px;
 }
 
-.section_entete > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.section_entete_btn {
   margin: 15px auto;
-  height: 50px;
   width: 218px;
-  border-radius: 25px;
-  background: linear-gradient(to top, var(--col_primaire), var(--col_secondaire));
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 1;
 }
 
-.section_entete > a p {
-  color: white;
+.section_entete_btn span {
   font: 400 16px "Roboto", sans-serif;
-}
-
-.section_entete > a:hover::after {
-  opacity: 1;
-}
-
-.section_entete > a::after {
-  content: "";
-  opacity: 0;
-  border-radius: inherit;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  backdrop-filter: brightness(1.1);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  transition: opacity 0.5s;
 }
 
 /* Section Fonctionnement */
