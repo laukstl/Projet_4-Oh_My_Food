@@ -261,23 +261,23 @@ header {
         & .card_like {
             cursor: pointer;
             position: relative;
-            & .like_default {
+            & .like__default {
                 pointer-events: none;
                 position: absolute;
                 top: 0; bottom: 0; left: 0; right: 0;
                 transition: opacity 0.4s ease;
                 height: 1.5em;
             }
-            & .like_liked {
+            & .like__liked {
                 pointer-events: none;
                 height: 1.5em;
                 opacity: 0;
                 transition: opacity 0.4s ease;
             }
-            &:hover .like_liked {
+            &:hover .like__liked {
                 opacity: 1;
             }
-            &:hover .like_default {
+            &:hover .like__default {
                 opacity: 0;
             }
         }

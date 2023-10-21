@@ -633,7 +633,7 @@ header .header_localisation p {
   position: relative;
 }
 
-.restaurant_cards_content .card_like .like_default {
+.restaurant_cards_content .card_like .like__default {
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -644,17 +644,17 @@ header .header_localisation p {
   height: 1.5em;
 }
 
-.restaurant_cards_content .card_like .like_liked {
+.restaurant_cards_content .card_like .like__liked {
   pointer-events: none;
   height: 1.5em;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.restaurant_cards_content .card_like:hover .like_liked {
+.restaurant_cards_content .card_like:hover .like__liked {
   opacity: 1;
 }
 
-.restaurant_cards_content .card_like:hover .like_default {
+.restaurant_cards_content .card_like:hover .like__default {
   opacity: 0;
 }
