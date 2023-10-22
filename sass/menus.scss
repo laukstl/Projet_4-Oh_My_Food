@@ -3,6 +3,7 @@
 
 .header {
     display: flex;
+
     &__arrow {
         position: relative;
         width: 30px;
@@ -10,6 +11,7 @@
         top: 22px;
         left: 25px;
     }
+
     &__logo {
         width: 162px;
         @media (min-width: 1440px) { width: 200px; }
@@ -20,9 +22,12 @@
 main {
     & > .restaurant__image_box {
         height: 275px;
+
         @media (min-width: 1440px) { height: 375px;}
+
         background-size: cover;
         background-position: center;
+
         &.etablissement_palette { background-image: url("../images/restaurants/jay-wennington-1440.jpg"); }
         &.etablissement_note { background-image: url("../images/restaurants/stil-1440.jpg"); }
         &.etablissement_francaise { background-image: url("../images/restaurants/toa-heftiba-1440.jpg"); }
@@ -33,16 +38,15 @@ main {
 .restaurant__container {
     max-width: 1054px;
     margin: auto;
-    @media (min-width: 685px) and (max-width: 1439px) {
-        padding: 0px 20% 40px 10%px;
-    }
+    background: var(--col_gris_tres_clair);
+    padding: 0 0 40px 0;
+    position: relative;
+
     @media (min-width: 1440px) {
         margin: 0px 193px;
         padding: 0px 193px 40px 193px;
     }
-    background: var(--col_gris_tres_clair);
-    padding: 0 0 40px 0;
-    position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -59,32 +63,40 @@ main {
 .menu__header {
     display: flex;
     justify-content: space-between;
-    @media (min-width: 685px) { justify-content: center; }
     align-items: center;
     padding: 0px 15px 15px 15px;
+
+    @media (min-width: 685px) { justify-content: center; }
+
     & .like__button {
         margin-right: 20px;
-        @media (min-width: 685px) { margin-left: 20px; }
         cursor: pointer;
         position: relative;
+
+        @media (min-width: 685px) { margin-left: 20px; }
+
         & .like__default {
             position: absolute;
             top: 0; bottom: 0; left: 0; right: 0;
             transition: opacity 0.4s ease;
             height: 21px;
         }
+
         & .like__liked {
             height: 21px;
             opacity: 0;
             transition: opacity 0.4s ease;
         }
+
         &:hover .like__liked {
             opacity: 1;
         }
+
         &:hover .like__default {
             opacity: 0;
         }
     }
+
     & .establishment__name {
         font: 28px Shrikhand;
     }
@@ -95,11 +107,13 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 10px 12.5px;
+    margin-bottom: 20px;
+    
     @media (min-width: 685px) and (max-width: 1439px) {
         align-items: center;
     }
-    padding: 10px 12.5px;
-    margin-bottom: 20px;
+    
     & .section__title::after { // Trait
         content: "";
         display: block;
@@ -107,6 +121,7 @@ main {
         border-bottom: 3px #99E2D0 solid;
         width: 40px;
     }
+    
     & .cards {
         width: 100%;
         max-width: 642px;
@@ -115,19 +130,26 @@ main {
         gap: 12px;
     
     }
-    &.starters, &.dishes, &.desserts {
+    
+    &.starters,
+    &.dishes,
+    &.desserts {
         opacity: 0;
         animation: 2s ease 0.5s FadeIn forwards;
     }
+    
     &.starters {
         animation-delay: 0s;
     }
+    
     &.dishes {
         animation-delay: 0.25s;
     }
+    
     &.desserts {
         animation-delay: 0.5s;
     }
+    
     @keyframes FadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
@@ -141,6 +163,7 @@ main {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     display: flex;
     overflow: hidden;
+
     &__text {
         display: flex;
         padding: 15px;
@@ -148,6 +171,7 @@ main {
         transition: all 0.25s ease-in-out;
         width: calc(100% - 1px);
     }
+
     &__details {
         text-overflow: ellipsis;
         overflow: hidden;
@@ -156,6 +180,7 @@ main {
         flex: 1;
         transition: all 0.25s ease-in-out;
     }
+
     &__name {
         font-size: 18px;
         font-weight: 500;
@@ -163,12 +188,14 @@ main {
         overflow: hidden;
         max-width: 100%;
     }
+
     &__description {
         font-size: 14px;
         text-overflow: ellipsis;
         overflow: hidden;
         max-width: 100%;
     }
+
     &__price {
         font-size: 15px;
         font-weight: 700;
@@ -177,19 +204,23 @@ main {
         position: absolute;
         right: 0;
     }
+
     &__select-button {
         transition: transform 0.25s ease-in-out;
         transform: translateX(110%);
         position: absolute;
         right: 0;
     }
+
     &:hover &__price {
         margin-right: 75px; // anim une margin !
     }
+
     &:hover &__text {
         padding-right: 75px;
         // flex: 0.8;
     }
+
     &:hover &__select-button {
         cursor: pointer;
         transform: none;
@@ -199,6 +230,7 @@ main {
 .btn--pages-menu {
     margin: 30px auto 0px;
     width: 186px;
+
     & span {
         font: 500 16px "Roboto", sans-serif;
     }
