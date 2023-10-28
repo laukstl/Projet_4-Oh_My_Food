@@ -141,13 +141,32 @@ header {
     margin-top: 1.25em;
 
     @media (min-width: 1080px){
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         width: 1080px;
     }
 
-    @media (min-width: 768px){
-        flex-direction: row;
-        flex-wrap: wrap;
+    @media (min-width: 768px) and (max-width: 1079px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "fonctionnement_card__1 fonctionnement_card__1"
+        "fonctionnement_card__2 fonctionnement_card__3";
         align-items: center;
+    }
+}
+
+.fonctionnement_card {
+    &__1 {
+        grid-area: fonctionnement_card__1;
+    }
+    &__2 {
+        grid-area: fonctionnement_card__2;
+    }
+    &__3 {
+        grid-area: fonctionnement_card__3;
     }
 }
 

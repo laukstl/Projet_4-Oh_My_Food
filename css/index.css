@@ -11,44 +11,39 @@
 }
 
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto/roboto-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto/roboto-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-medium-webfont.woff") format("woff"), url("../fonts/roboto/roboto-medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-bold-webfont.woff") format("woff"), url("../fonts/roboto/roboto-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   src: url("../fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("../fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 * {
   box-sizing: border-box;
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -61,7 +56,7 @@ p {
 
 h1, h2, h3 {
   margin: 0;
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -99,15 +94,12 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
-
 .btn span {
   color: white;
 }
-
 .btn:hover::after {
   opacity: 1;
 }
-
 .btn::after {
   content: "";
   opacity: 0;
@@ -140,7 +132,6 @@ footer {
   background-color: var(--col_gris_sombre);
   padding: 22px 25px;
 }
-
 @media (min-width: 1054px) {
   footer {
     padding: 30px 25px;
@@ -148,14 +139,12 @@ footer {
     flex-direction: row-reverse;
   }
 }
-
 footer > p {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   font-style: normal;
   font-size: 18px;
   font-weight: 400;
 }
-
 @media (min-width: 1054px) {
   footer > p {
     justify-content: flex-end;
@@ -165,51 +154,42 @@ footer > p {
     margin: 0.7em 0 0 16px;
   }
 }
-
 footer ol {
   margin-top: 1em;
 }
-
 @media (min-width: 1054px) {
   footer ol {
     display: flex;
     gap: 10px;
   }
 }
-
 footer li {
   line-height: 1.5em;
 }
-
 @media (min-width: 1054px) {
   footer li {
     margin-top: 0.7em;
   }
 }
-
 footer .footer__bold {
   display: inline-block;
   margin-left: 0.5em;
   font-weight: 500;
 }
-
 @media (min-width: 1054px) {
   footer .footer__bold {
     width: 168px;
   }
 }
-
 @media (min-width: 1054px) {
   footer .footer__thin {
     display: inline-block;
     width: 130px;
   }
 }
-
 footer a:link {
   color: white;
 }
-
 footer a:link:hover {
   text-decoration: underline;
   color: white;
@@ -229,7 +209,6 @@ footer a:link:hover {
   z-index: 9999;
   animation: fadeInOut 3s ease 0s 1 normal forwards;
 }
-
 @keyframes loader {
   0% {
     width: 10%;
@@ -265,7 +244,6 @@ footer a:link:hover {
     transform: rotate(360deg);
   }
 }
-
 @keyframes pan {
   0% {
     transform: rotate(0deg);
@@ -282,7 +260,6 @@ footer a:link:hover {
     transform: rotate(0deg);
   }
 }
-
 @keyframes shadow {
   0% {
     width: 30%;
@@ -295,13 +272,11 @@ footer a:link:hover {
     width: 30%;
   }
 }
-
 .loader-container .pan-loader {
   width: 180px;
   height: 180px;
   margin: 100px auto;
 }
-
 .loader-container .pan-loader .loader {
   position: relative;
   top: 10%;
@@ -315,13 +290,11 @@ footer a:link:hover {
   animation: loader 2s infinite;
   animation-timing-function: linear;
 }
-
 .loader-container .pan-loader .pan-container {
   display: flex;
   width: 100%;
   animation: pan 2s infinite;
 }
-
 .loader-container .pan-loader .pan {
   width: 60%;
   height: 20px;
@@ -329,7 +302,6 @@ footer a:link:hover {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-
 .loader-container .pan-loader .handle {
   width: 40%;
   height: 10px;
@@ -339,7 +311,6 @@ footer a:link:hover {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-
 .loader-container .pan-loader .shadow {
   position: relative;
   top: 15%;
@@ -350,7 +321,6 @@ footer a:link:hover {
   border-radius: 20px;
   animation: shadow 2s infinite;
 }
-
 @keyframes fadeInOut {
   0% {
     opacity: 1;
@@ -371,18 +341,15 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-
 header > img {
   width: 162px;
   margin: 18px auto;
 }
-
 @media (min-width: 376px) {
   header > img {
     width: 200px;
   }
 }
-
 header .header_localisation {
   display: flex;
   justify-content: center;
@@ -391,13 +358,11 @@ header .header_localisation {
   background-color: var(--col_gris_clair);
   box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.2);
 }
-
 @media (min-width: 376px) {
   header .header_localisation {
     box-shadow: none;
   }
 }
-
 header .header_localisation p {
   font-weight: 700;
   color: var(--col_gris_sombre);
@@ -414,44 +379,36 @@ header .header_localisation p {
   background: var(--col_gris_tres_clair);
   text-align: center;
 }
-
 .section_entete_titre_accroche {
   width: 275px;
 }
-
 .section_entete_titre_accroche h1 {
   font-size: 24px;
   font-weight: 700;
 }
-
 @media (min-width: 1024px) {
   .section_entete_titre_accroche h1 {
     font-size: 40px;
   }
 }
-
 @media (min-width: 720px) and (max-width: 1439px) {
   .section_entete_titre_accroche {
     width: 100%;
   }
 }
-
 @media (min-width: 1024px) {
   .section_entete_titre_accroche {
     width: 100%;
     font-size: 40px;
   }
 }
-
 .section_entete_texte_accroche > p {
   font-size: 18px;
 }
-
 .section_entete_btn {
   margin: 15px auto;
   width: 218px;
 }
-
 .section_entete_btn span {
   font: 400 16px "Roboto", sans-serif;
 }
@@ -476,19 +433,32 @@ header .header_localisation p {
   gap: 1.5em;
   margin-top: 1.25em;
 }
-
 @media (min-width: 1080px) {
   .fonctionnement-cards__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 1080px;
   }
 }
-
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1079px) {
   .fonctionnement-cards__box {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "fonctionnement_card__1 fonctionnement_card__1" "fonctionnement_card__2 fonctionnement_card__3";
     align-items: center;
   }
+}
+
+.fonctionnement_card__1 {
+  grid-area: fonctionnement_card__1;
+}
+.fonctionnement_card__2 {
+  grid-area: fonctionnement_card__2;
+}
+.fonctionnement_card__3 {
+  grid-area: fonctionnement_card__3;
 }
 
 .fonctionnement_cards {
@@ -499,13 +469,11 @@ header .header_localisation p {
   margin-left: 10px;
   background: var(--col_gris_tres_clair);
 }
-
 @media (min-width: 768px) {
   .fonctionnement_cards {
     min-width: 322px;
   }
 }
-
 .fonctionnement_cards__pastilles {
   display: flex;
   align-items: center;
@@ -519,12 +487,10 @@ header .header_localisation p {
   color: white;
   background: var(--col_primaire);
 }
-
 .fonctionnement_cards__img {
   position: relative;
   left: -10px;
 }
-
 .fonctionnement_cards__txt {
   margin-left: 15px;
   font-weight: 500;
@@ -553,7 +519,6 @@ header .header_localisation p {
   gap: 18px;
   margin-top: 1.25em;
 }
-
 @media (min-width: 1080px) {
   .restaurant_cards__box {
     justify-content: space-between;
@@ -562,7 +527,6 @@ header .header_localisation p {
     gap: 50px;
   }
 }
-
 @media (min-width: 1440px) {
   .restaurant_cards__box {
     display: grid;
@@ -577,20 +541,17 @@ header .header_localisation p {
   height: 250px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
 @media (min-width: 1024px) {
   .restaurant_cards {
     min-width: 490px;
   }
 }
-
 .restaurant_cards__images {
   width: 100%;
   object-fit: cover;
   height: 175px;
   border-radius: 20px 20px 0px 0px;
 }
-
 .restaurant_cards .label_new {
   position: absolute;
   padding: 0.5em 1em;
@@ -602,24 +563,20 @@ header .header_localisation p {
   right: 1em;
   top: 1em;
 }
-
 .restaurant_cards_content {
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
-
 .restaurant_cards_content .button_like {
   cursor: pointer;
   position: relative;
 }
-
 .restaurant_cards_content .button_like__default, .restaurant_cards_content .button_like__liked {
   pointer-events: none;
   height: 1.5em;
   transition: opacity 0.4s ease;
 }
-
 .restaurant_cards_content .button_like__default {
   position: absolute;
   top: 0;
@@ -627,15 +584,12 @@ header .header_localisation p {
   left: 0;
   right: 0;
 }
-
 .restaurant_cards_content .button_like__liked {
   opacity: 0;
 }
-
 .restaurant_cards_content .button_like:hover .button_like__liked {
   opacity: 1;
 }
-
 .restaurant_cards_content .button_like:hover .button_like__default {
   opacity: 0;
 }
