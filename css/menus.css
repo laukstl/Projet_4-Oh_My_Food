@@ -10,44 +10,39 @@
 }
 
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto/roboto-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto/roboto-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-medium-webfont.woff") format("woff"), url("../fonts/roboto/roboto-medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url("../fonts/roboto/roboto-bold-webfont.woff") format("woff"), url("../fonts/roboto/roboto-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   src: url("../fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("../fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 * {
   box-sizing: border-box;
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -60,7 +55,7 @@ p {
 
 h1, h2, h3 {
   margin: 0;
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -98,15 +93,12 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
-
 .btn span {
   color: white;
 }
-
 .btn:hover::after {
   opacity: 1;
 }
-
 .btn::after {
   content: "";
   opacity: 0;
@@ -139,7 +131,6 @@ footer {
   background-color: var(--col_gris_sombre);
   padding: 22px 25px;
 }
-
 @media (min-width: 1054px) {
   footer {
     padding: 30px 25px;
@@ -147,14 +138,12 @@ footer {
     flex-direction: row-reverse;
   }
 }
-
 footer > p {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   font-style: normal;
   font-size: 18px;
   font-weight: 400;
 }
-
 @media (min-width: 1054px) {
   footer > p {
     justify-content: flex-end;
@@ -164,51 +153,42 @@ footer > p {
     margin: 0.7em 0 0 16px;
   }
 }
-
 footer ol {
   margin-top: 1em;
 }
-
 @media (min-width: 1054px) {
   footer ol {
     display: flex;
     gap: 10px;
   }
 }
-
 footer li {
   line-height: 1.5em;
 }
-
 @media (min-width: 1054px) {
   footer li {
     margin-top: 0.7em;
   }
 }
-
 footer .footer__bold {
   display: inline-block;
   margin-left: 0.5em;
   font-weight: 500;
 }
-
 @media (min-width: 1054px) {
   footer .footer__bold {
     width: 168px;
   }
 }
-
 @media (min-width: 1054px) {
   footer .footer__thin {
     display: inline-block;
     width: 130px;
   }
 }
-
 footer a:link {
   color: white;
 }
-
 footer a:link:hover {
   text-decoration: underline;
   color: white;
@@ -217,7 +197,6 @@ footer a:link:hover {
 .header {
   display: flex;
 }
-
 .header__arrow {
   position: relative;
   width: 30px;
@@ -225,12 +204,10 @@ footer a:link:hover {
   top: 22px;
   left: 25px;
 }
-
 .header__logo {
   width: 162px;
   margin: 20px auto;
 }
-
 @media (min-width: 1440px) {
   .header__logo {
     width: 200px;
@@ -242,25 +219,20 @@ main > .restaurant__image_box {
   background-size: cover;
   background-position: center;
 }
-
 @media (min-width: 1440px) {
   main > .restaurant__image_box {
     height: 375px;
   }
 }
-
 main > .restaurant__image_box.etablissement_palette {
   background-image: url("../images/restaurants/jay-wennington-1440.jpg");
 }
-
 main > .restaurant__image_box.etablissement_note {
   background-image: url("../images/restaurants/stil-1440.jpg");
 }
-
 main > .restaurant__image_box.etablissement_francaise {
   background-image: url("../images/restaurants/toa-heftiba-1440.jpg");
 }
-
 main > .restaurant__image_box.etablissement_delice {
   background-image: url("../images/restaurants/louis-hansel-1440.jpg");
 }
@@ -272,14 +244,12 @@ main > .restaurant__image_box.etablissement_delice {
   padding: 0 0 40px 0;
   position: relative;
 }
-
 @media (min-width: 1440px) {
   .restaurant__container {
     margin: 0px 193px;
     padding: 0px 193px 40px 193px;
   }
 }
-
 .restaurant__container::after {
   content: "";
   position: absolute;
@@ -298,25 +268,21 @@ main > .restaurant__image_box.etablissement_delice {
   align-items: center;
   padding: 0px 15px 15px 15px;
 }
-
 @media (min-width: 685px) {
   .menu__header {
     justify-content: center;
   }
 }
-
 .menu__header .like__button {
   margin-right: 20px;
   cursor: pointer;
   position: relative;
 }
-
 @media (min-width: 685px) {
   .menu__header .like__button {
     margin-left: 20px;
   }
 }
-
 .menu__header .like__button .like__default {
   position: absolute;
   top: 0;
@@ -326,21 +292,17 @@ main > .restaurant__image_box.etablissement_delice {
   transition: opacity 0.4s ease;
   height: 21px;
 }
-
 .menu__header .like__button .like__liked {
   height: 21px;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
-
 .menu__header .like__button:hover .like__liked {
   opacity: 1;
 }
-
 .menu__header .like__button:hover .like__default {
   opacity: 0;
 }
-
 .menu__header .establishment__name {
   font: 28px Shrikhand;
 }
@@ -353,13 +315,11 @@ main > .restaurant__image_box.etablissement_delice {
   padding: 10px 12.5px;
   margin-bottom: 20px;
 }
-
 @media (min-width: 685px) and (max-width: 1439px) {
   .courses {
     align-items: center;
   }
 }
-
 .courses .section__title::after {
   content: "";
   display: block;
@@ -367,7 +327,6 @@ main > .restaurant__image_box.etablissement_delice {
   border-bottom: 3px #99E2D0 solid;
   width: 40px;
 }
-
 .courses .cards {
   width: 100%;
   max-width: 642px;
@@ -375,24 +334,19 @@ main > .restaurant__image_box.etablissement_delice {
   flex-direction: column;
   gap: 12px;
 }
-
 .courses.starters, .courses.dishes, .courses.desserts {
   opacity: 0;
   animation: 2s ease 0.5s FadeIn forwards;
 }
-
 .courses.starters {
   animation-delay: 0s;
 }
-
 .courses.dishes {
   animation-delay: 0.25s;
 }
-
 .courses.desserts {
   animation-delay: 0.5s;
 }
-
 @keyframes FadeIn {
   from {
     opacity: 0;
@@ -410,7 +364,6 @@ main > .restaurant__image_box.etablissement_delice {
   display: flex;
   overflow: hidden;
 }
-
 .card__text {
   display: flex;
   padding: 15px;
@@ -418,7 +371,6 @@ main > .restaurant__image_box.etablissement_delice {
   transition: all 0.25s ease-in-out;
   width: calc(100% - 1px);
 }
-
 .card__details {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -427,7 +379,6 @@ main > .restaurant__image_box.etablissement_delice {
   flex: 1;
   transition: all 0.25s ease-in-out;
 }
-
 .card__name {
   font-size: 18px;
   font-weight: 500;
@@ -435,14 +386,12 @@ main > .restaurant__image_box.etablissement_delice {
   overflow: hidden;
   max-width: 100%;
 }
-
 .card__description {
   font-size: 14px;
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 100%;
 }
-
 .card__price {
   font-size: 15px;
   font-weight: 700;
@@ -451,22 +400,18 @@ main > .restaurant__image_box.etablissement_delice {
   position: absolute;
   right: 0;
 }
-
 .card__select-button {
   transition: transform 0.25s ease-in-out;
   transform: translateX(110%);
   position: absolute;
   right: 0;
 }
-
 .card:hover .card__price {
   margin-right: 75px;
 }
-
 .card:hover .card__text {
   padding-right: 75px;
 }
-
 .card:hover .card__select-button {
   cursor: pointer;
   transform: none;
@@ -476,7 +421,6 @@ main > .restaurant__image_box.etablissement_delice {
   margin: 30px auto 0px;
   width: 186px;
 }
-
 .btn--pages-menu span {
   font: 500 16px "Roboto", sans-serif;
 }
