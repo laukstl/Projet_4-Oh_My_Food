@@ -53,27 +53,6 @@ p {
   margin: 0;
 }
 
-h1, h2, h3 {
-  margin: 0;
-  font-family: "roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: #000;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 18px;
-}
-
 body {
   min-width: 320px;
   max-width: 1440px;
@@ -194,6 +173,30 @@ footer a:link:hover {
   color: white;
 }
 
+h1 {
+  margin: 0;
+  font-family: "Shrikhand";
+  font-size: 29px;
+  font-weight: 400;
+}
+
+h2, h3 {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+  font-style: normal;
+  color: #000;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .header {
   display: flex;
 }
@@ -244,12 +247,6 @@ main > .restaurant__image_box.etablissement_delice {
   padding: 0 0 40px 0;
   position: relative;
 }
-@media (min-width: 1440px) {
-  .restaurant__container {
-    margin: 0px 193px;
-    padding: 0px 193px 40px 193px;
-  }
-}
 .restaurant__container::after {
   content: "";
   position: absolute;
@@ -257,7 +254,7 @@ main > .restaurant__image_box.etablissement_delice {
   left: 0;
   right: 0;
   top: -40px;
-  height: 40px;
+  height: 41px;
   background: var(--col_gris_tres_clair);
   border-radius: 40px 40px 0 0;
 }
@@ -267,21 +264,13 @@ main > .restaurant__image_box.etablissement_delice {
   justify-content: space-between;
   align-items: center;
   padding: 0px 15px 15px 15px;
-}
-@media (min-width: 685px) {
-  .menu__header {
-    justify-content: center;
-  }
+  justify-content: center;
 }
 .menu__header .like__button {
   margin-right: 20px;
   cursor: pointer;
   position: relative;
-}
-@media (min-width: 685px) {
-  .menu__header .like__button {
-    margin-left: 20px;
-  }
+  margin-left: 25px;
 }
 .menu__header .like__button .like__default {
   position: absolute;
@@ -303,27 +292,20 @@ main > .restaurant__image_box.etablissement_delice {
 .menu__header .like__button:hover .like__default {
   opacity: 0;
 }
-.menu__header .establishment__name {
-  font: 28px Shrikhand;
-}
 
 /* SECTION STARTERS - ENTREES / DISHES - PLATS / DESSERTS */
 .courses {
-  width: 100%;
+  max-width: 654px;
   display: flex;
   flex-direction: column;
   padding: 10px 12.5px;
-  margin-bottom: 20px;
-}
-@media (min-width: 685px) and (max-width: 1439px) {
-  .courses {
-    align-items: center;
-  }
+  margin: 10px auto;
 }
 .courses .section__title::after {
   content: "";
   display: block;
-  margin: 10px 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
   border-bottom: 3px #99E2D0 solid;
   width: 40px;
 }
@@ -359,9 +341,10 @@ main > .restaurant__image_box.etablissement_delice {
 .card {
   height: 69px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   display: flex;
+  align-items: center;
   overflow: hidden;
 }
 .card__text {

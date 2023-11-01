@@ -54,27 +54,6 @@ p {
   margin: 0;
 }
 
-h1, h2, h3 {
-  margin: 0;
-  font-family: "roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: #000;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 18px;
-}
-
 body {
   min-width: 320px;
   max-width: 1440px;
@@ -193,6 +172,23 @@ footer a:link {
 footer a:link:hover {
   text-decoration: underline;
   color: white;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
+}
+
+h1, h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 /* LOADER */
@@ -345,9 +341,10 @@ header > img {
   width: 162px;
   margin: 18px auto;
 }
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   header > img {
     width: 200px;
+    margin: 30px auto;
   }
 }
 header .header_localisation {
@@ -358,13 +355,16 @@ header .header_localisation {
   background-color: var(--col_gris_clair);
   box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.2);
 }
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   header .header_localisation {
     box-shadow: none;
   }
 }
+header .header_localisation img {
+  width: 12px;
+}
 header .header_localisation p {
-  font-weight: 700;
+  font-weight: 500;
   color: var(--col_gris_sombre);
 }
 
@@ -374,17 +374,24 @@ header .header_localisation p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5em 1.5em;
-  gap: 1em;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 10px;
   background: var(--col_gris_tres_clair);
   text-align: center;
+}
+@media (min-width: 1080px) {
+  .section_entete {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 19px;
+  }
 }
 .section_entete_titre_accroche {
   width: 275px;
 }
 .section_entete_titre_accroche h1 {
-  font-size: 24px;
-  font-weight: 700;
+  line-height: 1.2em;
 }
 @media (min-width: 1080px) {
   .section_entete_titre_accroche h1 {
@@ -397,6 +404,7 @@ header .header_localisation p {
   }
 }
 .section_entete_texte_accroche > p {
+  line-height: 1.1em;
   font-size: 18px;
 }
 .section_entete_btn {
@@ -404,7 +412,7 @@ header .header_localisation p {
   width: 218px;
 }
 .section_entete_btn span {
-  font: 400 16px "Roboto", sans-serif;
+  font: 500 16px "Roboto", sans-serif;
 }
 
 /* Section Fonctionnement */
@@ -414,7 +422,6 @@ header .header_localisation p {
   flex-direction: column;
   gap: 25px;
 }
-
 @media (min-width: 1080px) {
   .section_fonctionnement__box {
     margin: 0px auto;
@@ -498,7 +505,6 @@ header .header_localisation p {
   gap: 20px;
   background: var(--col_gris_tres_clair);
 }
-
 @media (min-width: 1080px) {
   .section_restaurants__box {
     margin: 0px auto;
@@ -528,24 +534,24 @@ header .header_localisation p {
   }
 }
 
-.restaurant_cards {
+.restaurant_card {
   background-color: white;
   border-radius: 20px;
   height: 250px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 @media (min-width: 1080px) {
-  .restaurant_cards {
+  .restaurant_card {
     min-width: 490px;
   }
 }
-.restaurant_cards__images {
+.restaurant_card__photo {
   width: 100%;
   object-fit: cover;
   height: 175px;
   border-radius: 20px 20px 0px 0px;
 }
-.restaurant_cards .label_new {
+.restaurant_card__label-new {
   position: absolute;
   padding: 0.5em 1em;
   background: var(--col_vert_clair);
@@ -556,33 +562,35 @@ header .header_localisation p {
   right: 1em;
   top: 1em;
 }
-.restaurant_cards_content {
+.restaurant_card__content {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px 15px;
 }
-.restaurant_cards_content .button_like {
+.restaurant_card__content .button_like {
   cursor: pointer;
   position: relative;
+  top: 8px;
+  right: 8px;
 }
-.restaurant_cards_content .button_like__default, .restaurant_cards_content .button_like__liked {
+.restaurant_card__content .button_like__default, .restaurant_card__content .button_like__liked {
   pointer-events: none;
-  height: 1.5em;
+  height: 20px;
   transition: opacity 0.4s ease;
 }
-.restaurant_cards_content .button_like__default {
+.restaurant_card__content .button_like__default {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.restaurant_cards_content .button_like__liked {
+.restaurant_card__content .button_like__liked {
   opacity: 0;
 }
-.restaurant_cards_content .button_like:hover .button_like__liked {
+.restaurant_card__content .button_like:hover .button_like__liked {
   opacity: 1;
 }
-.restaurant_cards_content .button_like:hover .button_like__default {
+.restaurant_card__content .button_like:hover .button_like__default {
   opacity: 0;
 }
