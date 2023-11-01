@@ -378,7 +378,7 @@ main > .restaurant__image_box.etablissement_delice {
 .card__price {
   font-size: 15px;
   font-weight: 700;
-  margin: 35px 15px 0 10px;
+  margin: 35px 15px 10px 10px;
   transition: all 0.25s ease-in-out;
   position: absolute;
   right: 0;
